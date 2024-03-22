@@ -10,8 +10,8 @@
 
 <body>
   <div class="container">
-    <div class="coluna">
-      <div class="linha">
+    <div class="row">
+      <div class="col">
         <h1>Cadastre-se</h1>
         <form action="cad.php" method="post">
           <div class="mb-3">
