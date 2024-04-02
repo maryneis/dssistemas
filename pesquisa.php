@@ -24,7 +24,7 @@
                 <nav class="navbar bg-body-tertiary">
                     <div class="container-fluid">
                         <form class="d-flex" role="search" action="pesquisa.php" method="POST">
-                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" name="busca">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" name="pesquisar">
                             <button class="btn btn-outline-success" type="submit">Pesquisar</button>
                         </form>
                     </div>
@@ -41,7 +41,30 @@
                             </tr>
                         </thead>
                         <tbody>
+                        <?php
+                     while ($linha = mysqli_fetch_assoc($dados)){
+                        $nome = $linha['nome'];
+                        $endereco = $linha['endereco'];
+                        $telefone = $linha['telefone'];
+                        $data = $linha['data'];
+                        $email = $linha ['email'];
 
+                        echo "<tr>
+
+                        <td>$nome</td>
+                        <td>$endereco</td>
+                        <td>$telefone</td>
+                        <td>$data</td>
+                        <td>$email</td>
+                        <td>
+
+                        </td>
+
+                        </tr>";
+
+
+                     }
+                        ?>
                         </tbody>
                     </table>
             </div>
